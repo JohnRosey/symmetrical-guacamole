@@ -1,16 +1,16 @@
 package directives;
 /*
-demande de transfert de donnes de reseau
+indication de transfere de donnees de reseau
 Transfere de donnees
 N_Data.Req
  */
-public class N_DataReq {
+public class N_DataInd {
     String donneeUser;
 
     /**
      * @param donneeUser
      */
-    public N_DataReq(String donneeUser) {
+    public N_DataInd(String donneeUser) {
         this.donneeUser = donneeUser;
     }
 
@@ -24,7 +24,7 @@ public class N_DataReq {
 
     @Override
     public String toString() {
-        return "NDataReq{" +
+        return "N_DataInd{" +
                 "donneeUser='" + donneeUser + '\'' +
                 '}';
     }

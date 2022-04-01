@@ -1,17 +1,24 @@
 package directives;
 
-/*
-ETABLISSEMENT DE CONNEXION RESEAU
+
+/* indication
+liberation  DE CONNEXION RESEAU
+
 N_Disconnect.Ind
  */
 public class N_DisconnectInd {
     private int adresseReponse;
     private String raison;
 
+    /**
+     * @param adrReponde
+     * @param raison
+     */
     public N_DisconnectInd(int adrReponde, String raison) {
         this.adresseReponse = adrReponde;
         this.raison = raison;
     }
+
 
     public int getAdrReponde() {
         return adresseReponse;
@@ -28,6 +35,7 @@ public class N_DisconnectInd {
     public void setRaison(String raison) {
         this.raison = raison;
     }
+
 
     @Override
     public String toString() {

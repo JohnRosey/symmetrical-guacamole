@@ -1,38 +1,53 @@
 package directives;
+
+/**
+ *
+ */
 /*
 ETABLISSEMENT DE CONNEXION RESEAU
+demande
 N_Connect.Req
 
  */
 public class N_ConnectReq {
-    private int adrSource,adrDestination;
 
+    private int adressSource,adresseDestination;
+
+
+
+    public int getAdressSource() {
+        return adressSource;
+    }
+
+    public void setAdressSource(int adressSource) {
+        this.adressSource = adressSource;
+    }
+
+    public int getAdresseDestination() {
+        return adresseDestination;
+    }
+
+    public void setAdresseDestination(int adresseDestination) {
+        this.adresseDestination = adresseDestination;
+    }
+
+
+
+    /**
+     * @param adrSource
+     * @param adrDestination
+     */
     public N_ConnectReq(int adrSource, int adrDestination) {
-        this.adrSource = adrSource;
-        this.adrDestination = adrDestination;
+        this.adressSource = adrSource;
+        this.adresseDestination = adrDestination;
     }
 
-    public int getAdrSource() {
-        return adrSource;
-    }
-
-    public void setAdrSource(int adrSource) {
-        this.adrSource = adrSource;
-    }
-
-    public int getAdrDestination() {
-        return adrDestination;
-    }
-
-    public void setAdrDestination(int adrDestination) {
-        this.adrDestination = adrDestination;
-    }
 
     @Override
     public String toString() {
-        return "NConnectReq{" +
-                "adrSource=" + adrSource +
-                ", adrDestination=" + adrDestination +
+        return "N_ConnectReq{" +
+                "adressSource=" + adressSource +
+                ", adresseDestination=" + adresseDestination +
                 '}';
     }
 }

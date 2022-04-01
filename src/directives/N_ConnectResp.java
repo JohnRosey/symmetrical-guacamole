@@ -4,12 +4,11 @@ package directives;
 
 /*
 ETABLISSEMENT DE CONNEXION RESEAU
-Confirmation
- N_Connect.Conf
-
+REPONSE
+N_Connect.Resp
 
  */
-public class N_ConnectConf{
+public class N_ConnectResp {
 
     private int adresseReponse;
 
@@ -17,7 +16,7 @@ public class N_ConnectConf{
     /**
      * @param adresseReponse
      */
-    public N_ConnectConf(int adresseReponse) {
+    public N_ConnectResp(int adresseReponse) {
         this.adresseReponse = adresseReponse;
     }
 

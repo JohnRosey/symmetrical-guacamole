@@ -1,21 +1,26 @@
 package directives;
 
 /*
-ETABLISSEMENT DE CONNEXION RESEAU
+liberation de connexion de reseau
+DEMANDE
 N_Disconnect.Req
  */
 public class N_DisconnectReq {
     private int adresseReponse;
 
+    /**
+     * @param adresseReponse
+     */
     public N_DisconnectReq(int adresseReponse) {
         this.adresseReponse = adresseReponse;
     }
 
-    public int getAdrReponde() {
+
+    public int getAdresseReponse() {
         return adresseReponse;
     }
 
-    public void setAdrReponde(int adresseReponse) {
+    public void setAdresseReponse(int adresseReponse) {
         this.adresseReponse = adresseReponse;
     }
 
