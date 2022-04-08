@@ -1,7 +1,6 @@
-sdfgdgdfgfgdfgdf
-sdfadggbh
-afgbvdfgdab
-dfgbadfghsdghg
-dfhgfsnfhj
-fghjghjghdjghj
-ghjmghkj
+N_CONNECT 58 233 N_DATA test no :1  N_DISCONNECT
+N_CONNECT  12 115 N_DATA test no :2 N_DISCONNECT
+N_CONNECT  11 220 N_DATA test no :3 N_DISCONNECT
+N_CONNECT  1 111 N_DATA test no :4 N_DISCONNECT
+N_CONNECT  45 56 N_DATA test no :5 N_DISCONNECT
+N_CONNECT  32 18 N_DATA test no :6 N_DISCONNECT

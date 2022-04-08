@@ -1,6 +1,7 @@
 package com.company;
 
-import Read_and_Write.Read_and_Write;
+import Couche.Transport;
+import FileUtility.fileUtility;
 
 public class Main {
     enum PRIMITIVE {
@@ -12,9 +13,32 @@ public class Main {
         for (PRIMITIVE primitive : PRIMITIVE.values()) {
             System.out.println(primitive);
         }
-        //Mise en parametre du chemin du fichier de transaction
-        Read_and_Write.Read("src/transactions/S_ecr.txt");
 
+        //Reset tout les fichiers de log avant le lancement du programme
+        resetAllFile();
+
+
+//Mise en parametre du chemin du fichier de transaction
+
+        fileUtility.Generate_S_lec("src\\transactions\\S_ecr.txt");
+        //Affiche le contenu du fichier de transaction
+        fileUtility.Read("src\\transactions\\S_ecr.txt");
+
+
+    }
+
+    private static void resetAllFile(){
+        try{
+        fileUtility.Erase("src\\transactions\\S_ecr.txt");
+       // fileUtility.Erase("src/transactions/L_ecr.txt");
+      //  fileUtility.Erase("src/transactions/L_lec.txt");
+            }
+        catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("Impossible d'effacer");
+
+
+    }
     }
 
 }

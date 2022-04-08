@@ -4,10 +4,7 @@ package Couche;
 import Paquet.NDPU;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.Deque;
-import java.util.Queue;
-import java.util.Scanner;
+import java.util.*;
 
 public class Transport {
 
@@ -24,7 +21,7 @@ public class Transport {
     private boolean disconnected;
     private boolean connect;
 
-    //Les files FIFO
+    //Les files FIFO qui possedent les trames  dans une queue ordonnee
     private Queue<NDPU> transportToNetwork;// Canal transport vers reseau
     private Queue<NDPU> networkToTransport;// Canal Reseau vers Transport
 
@@ -41,18 +38,40 @@ public class Transport {
     /**
      * Methode qui permet de lire le fichier S_lec.txt
      */
-    public void LireTransport(){
-        File fichier = new File(S_lec);
-        NDPU transportToReseau =new NDPU(); ;//utilisation du protocole NDPU pour faire le transport vers reseau
-      try(Scanner lecture =new Scanner(fichier)){
-          while(lecture.hasNextLine()){
-              String LectureLigne = lecture.nextLine();
 
+    /**
+     * Methode qui permet de selectionner un chiffre aleatoirement
+     * @return int
+     */
+    public static int getRandomNumber(int max){
 
-      }
-      }catch (FileNotFoundException e) {
-              e.printStackTrace();
+        Random random = new Random();
+        return random.nextInt(max) + 1;
+
     }
+    /**
+     * Methode qui permet de set l'adresse d'une source
+     * @return String
+     */
+
+    public static String setAdresseSource(int destination){
+
+        int source;
+
+        do {
+            source = getRandomNumber(255);
+        }while(destination == source);
+
+        return String.valueOf(source);
+    }
+
+
+    /**
+     * Methode qui permet de set l'adresse d'une source
+     * @return String
+     */
+    public static String setAdresseDestination(){
+        return String.valueOf(getRandomNumber(255));
     }
 }
 

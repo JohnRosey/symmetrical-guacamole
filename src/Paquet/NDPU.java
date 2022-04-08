@@ -2,6 +2,9 @@ package Paquet;
 
 import com.company.Primitive;
 
+/**
+ * Structure public de NDPU qui represente les paquets
+ */
 public class NDPU {
     public Primitive type;
     public Paquet.paquet.Paquet paquet;
