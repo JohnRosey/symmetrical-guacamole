@@ -4,8 +4,6 @@ import Couche.Transport;
 
 import java.io.*;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
 
 public class fileUtility {
     /**
@@ -123,31 +121,24 @@ public class fileUtility {
             }
             FileWriter fileWriter= new FileWriter(filepath);
             //adresseGen(source,dest);
-           String dest = Transport.setAdresseDestination();
-            int intDest= Integer.parseInt(dest);
-            String source= Transport.setAdresseSource(intDest);
-
+            int dest = Transport.setAdresseDestination();
+            int intDest= dest;
+            int source= Transport.setAdresseSource(intDest);
            /* System.out.println("Les adresses sont :");
 
             System.out.println(source);
 
             System.out.println(dest);*/
          //Donnees generee
-            fileWriter.write("N_CONNECT"+" "+dest+" "+source+" "+"N_DATA test no :1 "+" "+"N_DISCONNECT"+"\n");
+
+                String message = ("N_CONNECT" + " " + (dest) + " " + (source) + " " + "N_DATA test no :1 " + " " + "N_DISCONNECT" + "\n");
+
+                    fileWriter.write(message);
+
+                    //Donnees de test a ajouter
 
             //Donnees de test a ajouter
 
-            fileWriter.write("N_CONNECT "+" "+"12 "+"115 "+"N_DATA test no :2 "+"N_DISCONNECT"+"\n");
-            fileWriter.write("N_CONNECT "+" "+"11 "+"220 "+"N_DATA test no :3 "+"N_DISCONNECT"+"\n");
-            fileWriter.write("N_CONNECT "+" "+"1 "+"111 "+"N_DATA test no :4 "+"N_DISCONNECT"+"\n");
-            fileWriter.write("N_CONNECT "+" "+"45 "+"56 "+"N_DATA test no :5 "+"N_DISCONNECT"+"\n");
-            fileWriter.write("N_CONNECT "+" "+"32 "+"18 "+"N_DATA test no :6 "+"N_DISCONNECT"+"\n");
-
-            try (Writer writer = new BufferedWriter(new OutputStreamWriter(
-                    new FileOutputStream("filename.txt"), "utf-8"))) {
-                writer.write("something");
-            }
-            System.out.println("Successfully wrote to the file.");
             fileWriter.close();
 
         } catch (Exception e) {
@@ -158,9 +149,9 @@ public class fileUtility {
      * TODO : Creer une fonction comme celle ci-dessous :  private static void adresseGen () qui genere les adresses  et les renvoie dans un tableau que le FileWriter puisse les ecrire dans le fichier
      */
 
-    private static void adresseGen(String source , String dest){
+    private static void adresseGen(int source , int dest){
         dest = Transport.setAdresseDestination();
-        int intDest= Integer.parseInt(dest);
+        int intDest= dest;
         source= Transport.setAdresseSource(intDest);
         System.out.println("Les adresses sont :");
 
