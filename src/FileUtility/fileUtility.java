@@ -131,7 +131,7 @@ public class fileUtility {
             System.out.println(dest);*/
          //Donnees generee
 
-                String message = ("N_CONNECT" + " " + (dest) + " " + (source) + " " + "N_DATA test no :1 " + " " + "N_DISCONNECT" + "\n");
+                String message = ("N_CONNECT" + " " + (dest) + " " + (source) + "\n" + "N_DATA test no :1 " + "\n" + "N_DISCONNECT" + "\n");
 
                     fileWriter.write(message);
 

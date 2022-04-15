@@ -26,6 +26,7 @@ public class Main {
         //Affiche le contenu du fichier de transaction
         fileUtility.Read("S_ecr.txt");
 new Transport().networkWrite();
+new Transport().networkRead();
     }
 
     private static void resetAllFile(){
