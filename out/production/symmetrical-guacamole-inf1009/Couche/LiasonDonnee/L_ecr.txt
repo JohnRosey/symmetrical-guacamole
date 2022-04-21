@@ -1,0 +1,15 @@
+Envoi du Paquet d'Appel {  numeroConnexion= 1, typeDePaquet= 00001011 adresseSource = 200, adrDestination = 58 }
+Envoi du Paquet d'Appel {  numeroConnexion= 2, typeDePaquet= 00001011 adresseSource = 142, adrDestination = 166 }
+Envoi du PaquetDonnee {  numeroConnexion= 2, typeDePaquet= 00000000 donnee = hello word }
+Envoi du Paquet d'Appel {  numeroConnexion= 3, typeDePaquet= 00001011 adresseSource = 156, adrDestination = 142 }
+Envoi du Paquet d'Appel {  numeroConnexion= 4, typeDePaquet= 00001011 adresseSource = 120, adrDestination = 166 }
+Envoi du Paquet d'Appel {  numeroConnexion= 5, typeDePaquet= 00001011 adresseSource = 166, adrDestination = 120 }
+Envoi du PaquetDonnee {  numeroConnexion= 5, typeDePaquet= 00000000 donnee = nice }
+Envoi du Paquet d'Appel {  numeroConnexion= 6, typeDePaquet= 00001011 adresseSource = 156, adrDestination = 142 }
+Envoi du Paquet d'Appel {  numeroConnexion= 7, typeDePaquet= 00001011 adresseSource = 104, adrDestination = 157 }
+Envoi du Paquet d'Appel {  numeroConnexion= 8, typeDePaquet= 00001011 adresseSource = 142, adrDestination = 120 }
+Envoi du Paquet d'Appel {  numeroConnexion= 9, typeDePaquet= 00001011 adresseSource = 104, adrDestination = 157 }
+Envoi du Paquet d'Appel {  numeroConnexion= 10, typeDePaquet= 00001011 adresseSource = 104, adrDestination = 157 }
+Envoi du Paquet d'Appel {  numeroConnexion= 11, typeDePaquet= 00001011 adresseSource = 104, adrDestination = 157 }
+Envoi du Paquet d'Appel {  numeroConnexion= 12, typeDePaquet= 00001011 adresseSource = 166, adrDestination = 156 }
+Envoi du PaquetDonnee {  numeroConnexion= 12, typeDePaquet= 00000000 donnee = y6546¬¦¤¢¬345432 }

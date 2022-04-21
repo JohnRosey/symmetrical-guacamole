@@ -1,0 +1,9 @@
+Microsoft.exe       Walmart.exe       DATA Computer is a
+Snapchat.exe       Target.exe       DATA Phone is b
+Twitter.exe       Ads.exe       DATA Tablet is cc
+Microsoft.exe       Walmart.exe       LIB
+Snapchat.exe       Target.exe       LIB
+Twitter.exe       Ads.exe       LIB
+Microsoft.exe       Walmart.exe       CONNECT
+Snapchat.exe       Target.exe       CONNECT
+Twitter.exe       Ads.exe       CONNECT

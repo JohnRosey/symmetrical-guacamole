@@ -1,38 +1,36 @@
 package Paquet;
 
-public class paquet {
-    public abstract class Paquet {
-        protected int adresseSource;
-        protected int adresseDestination;
 
+public class Paquet {
+    private int numeroConnexion;
+    private String typePaquet;
 
-        public Paquet(int adresseSource, int adresseDestination) {
-            this.adresseSource = adresseSource;
-            this.adresseDestination = adresseDestination;
-        }
+    public Paquet(int numeroConnexion, String typePaquet) {
+        this.numeroConnexion = numeroConnexion;
+        this.typePaquet = typePaquet;
+    }
 
-        public int getAdresseSource() {
-            return adresseSource;
-        }
+    public int getNumeroConnexion() {
+        return numeroConnexion;
+    }
 
-        public void setAdresseSource(int adresseSource) {
-            this.adresseSource = adresseSource;
-        }
+    public void setNumeroConnexion(int numeroConnexion) {
+        this.numeroConnexion = numeroConnexion;
+    }
 
-        public int getAdresseDestination() {
-            return adresseDestination;
-        }
+    public String getTypePaquet() {
+        return typePaquet;
+    }
 
-        public void setAdresseDestination(int adresseDestination) {
-            this.adresseDestination = adresseDestination;
-        }
+    public void setTypePaquet(String typePaquet) {
+        this.typePaquet = typePaquet;
+    }
 
-        @Override
-        public String toString() {
-            return "Paquet{" +
-                    "adresseSource=" + adresseSource +
-                    ", adresseDestination=" + adresseDestination +
-                    '}';
-        }
+    @Override
+    public String toString() {
+        return
+                " numeroConnexion= " + numeroConnexion +
+                ", typeDePaquet= " + typePaquet ;
+
     }
 }
