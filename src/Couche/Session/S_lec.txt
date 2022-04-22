@@ -1,0 +1,9 @@
+Facebook.exe       AWS.exe       DATA Computer is a
+Youtube.exe       Costco.exe       DATA Phone is b
+Microsoft.exe       reddit.exe       DATA Tablet is cc
+Facebook.exe       AWS.exe       LIB
+Youtube.exe       Costco.exe       LIB
+Microsoft.exe       reddit.exe       LIB
+Facebook.exe       AWS.exe       CONNECT
+Youtube.exe       Costco.exe       CONNECT
+Microsoft.exe       reddit.exe       CONNECT

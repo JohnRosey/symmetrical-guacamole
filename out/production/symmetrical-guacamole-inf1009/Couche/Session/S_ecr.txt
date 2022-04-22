@@ -1,24 +1,24 @@
-1234 a recu la primitive  Primitive :N_Connect.Conf {  adresseReponse = 200 }
-1234 a réussi à se connecter au  22, adresse de provenance: 200, adresse destination: 58 Etat: connexion_etablie
-Firefox a recu la primitive  Primitive :N_Connect.Conf {  adresseReponse = 142 }
-Firefox a réussi à se connecter au Edge, adresse de provenance: 142, adresse destination: 166 Etat: connexion_etablie
-Chrome a recu la primitive  Primitive : N_Disconnect.Ind {  adresseReponse = 156, raison = refus de connexion de la part du distant }
-Chrome{adresse: 156} déconnecté du Firefoxadresse de provenance 142, Raison: refus de connexion de la part du distant
-Brave a recu la primitive  Primitive :N_Connect.Conf {  adresseReponse = 120 }
-Brave a réussi à se connecter au Edge, adresse de provenance: 120, adresse destination: 166 Etat: connexion_etablie
-Edge a recu la primitive  Primitive :N_Connect.Conf {  adresseReponse = 166 }
-Edge a réussi à se connecter au Brave, adresse de provenance: 166, adresse destination: 120 Etat: connexion_etablie
-Chrome a recu la primitive  Primitive : N_Disconnect.Ind {  adresseReponse = 156, raison = refus de connexion de la part du distant }
-Chrome{adresse: 156} déconnecté du Firefoxadresse de provenance 142, Raison: refus de connexion de la part du distant
-22 a recu la primitive  Primitive : N_Disconnect.Ind {  adresseReponse = 104, raison = refus de connexion de la part du distant }
-22{adresse: 104} déconnecté du    1234adresse de provenance 157, Raison: refus de connexion de la part du distant
-Firefox a recu la primitive  Primitive :N_Connect.Conf {  adresseReponse = 142 }
-Firefox a réussi à se connecter au Brave, adresse de provenance: 142, adresse destination: 120 Etat: connexion_etablie
-22 a recu la primitive  Primitive : N_Disconnect.Ind {  adresseReponse = 104, raison = refus de connexion de la part du distant }
-22{adresse: 104} déconnecté du    1234adresse de provenance 157, Raison: refus de connexion de la part du distant
-22 a recu la primitive  Primitive : N_Disconnect.Ind {  adresseReponse = 104, raison = refus de connexion de la part du distant }
-22{adresse: 104} déconnecté du    1234adresse de provenance 157, Raison: refus de connexion de la part du distant
-22 a recu la primitive  Primitive : N_Disconnect.Ind {  adresseReponse = 104, raison = refus de connexion de la part du distant }
-22{adresse: 104} déconnecté du    1234adresse de provenance 157, Raison: refus de connexion de la part du distant
-Edge a recu la primitive  Primitive :N_Connect.Conf {  adresseReponse = 166 }
-Edge a réussi à se connecter au Chrome, adresse de provenance: 166, adresse destination: 156 Etat: connexion_etablie
+1234 a recu la primitive  Primitive : N_Disconnect.Ind {  adresseReponse = 156, raison = refus de connexion de la part du distant }
+1234{adresse: 156} déconnecté du  22adresse de provenance 9, Raison: refus de connexion de la part du distant
+1234 a recu la primitive  Primitive : N_Disconnect.Ind {  adresseReponse = 156, raison = refus de connexion de la part du distant }
+1234{adresse: 156} déconnecté du  22adresse de provenance 9, Raison: refus de connexion de la part du distant
+22 a recu la primitive  Primitive : N_Disconnect.Ind {  adresseReponse = 95, raison = la demande ne reçoit pas de réponse }
+22{adresse: 95} déconnecté du    1234adresse de provenance 44, Raison: la demande ne reçoit pas de réponse
+Brave a recu la primitive  Primitive :N_Connect.Conf {  adresseReponse = 237 }
+Brave a réussi à se connecter au Edge, adresse de provenance: 237, adresse destination: 47 Etat: connexion_etablie
+22 a recu la primitive  Primitive : N_Disconnect.Ind {  adresseReponse = 95, raison = la demande ne reçoit pas de réponse }
+22{adresse: 95} déconnecté du    1234adresse de provenance 44, Raison: la demande ne reçoit pas de réponse
+22 a recu la primitive  Primitive : N_Disconnect.Ind {  adresseReponse = 95, raison = la demande ne reçoit pas de réponse }
+22{adresse: 95} déconnecté du    1234adresse de provenance 44, Raison: la demande ne reçoit pas de réponse
+22 a recu la primitive  Primitive : N_Disconnect.Ind {  adresseReponse = 95, raison = la demande ne reçoit pas de réponse }
+22{adresse: 95} déconnecté du    1234adresse de provenance 44, Raison: la demande ne reçoit pas de réponse
+Edge a recu la primitive  Primitive :N_Connect.Conf {  adresseReponse = 47 }
+Edge a réussi à se connecter au Chrome, adresse de provenance: 47, adresse destination: 94 Etat: connexion_etablie
+Chrome a recu la primitive  Primitive :N_Connect.Conf {  adresseReponse = 94 }
+Chrome a réussi à se connecter au Firefox, adresse de provenance: 94, adresse destination: 78 Etat: connexion_etablie
+Edge a recu la primitive  Primitive :N_Connect.Conf {  adresseReponse = 47 }
+Edge a réussi à se connecter au Brave, adresse de provenance: 47, adresse destination: 237 Etat: connexion_etablie
+Firefox a recu la primitive  Primitive : N_Disconnect.Ind {  adresseReponse = 78, raison = refus de connexion de la part du distant }
+Firefox{adresse: 78} déconnecté du Braveadresse de provenance 237, Raison: refus de connexion de la part du distant
+Firefox a recu la primitive  Primitive : N_Disconnect.Ind {  adresseReponse = 78, raison = refus de connexion de la part du distant }
+Firefox{adresse: 78} déconnecté du Edgeadresse de provenance 47, Raison: refus de connexion de la part du distant

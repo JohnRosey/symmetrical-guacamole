@@ -12,7 +12,10 @@ import java.awt.event.MouseEvent;
 import java.io.*;
 /*
  * Created by JFormDesigner on Wed Apr 20 02:41:17 EDT 2022
+ * By GANSONRE ISMAEL
+ * Copyright (c) 2020 GANSONRE ISMAEL. All rights reserved.
  */
+
 
 
 
@@ -22,15 +25,24 @@ import java.io.*;
 public class guix extends JFrame {
     public guix() {
         initComponents();
-        boolean ecrire=false;
     }
 
-    private void button1MouseClicked(MouseEvent e) {
+    private void button1MouseClicked(MouseEvent e) throws IOException {
 
         TransportCouche transport = new TransportCouche();
         //fileUtility.Generate_S_lec("Couche/Session/S_lec.txt");
 System.out.println("here");
+
         transport.DemarrerCommunication();
+        System.out.println("Affichage des donnees");
+
+
+
+
+
+
+        ShowData();
+
     }
 
     private void button2MouseClicked(MouseEvent e) {
@@ -42,27 +54,25 @@ System.out.println("here");
         fileUtility.Erase("src/Couche/LiasonDonnee/L_ecr.txt");
         fileUtility.Erase("src/Couche/LiasonDonnee/L_lec.txt");
         fileUtility.Erase("src/Couche/Session/S_lec.txt");
-        System.out.println("erase");
+        System.out.println("Fichier effacé");
     }
 
-    private void button1(ActionEvent e) {
+    public   void ShowData(){
+
         try
         {
             //Probleme ici vous devez ccliquer 2 fois sur le bouton pour lancer la communication
-            FileReader reader = new FileReader( "src/Couche/Session/S_lec.txt" );
+            System.out.println("Communication lancée");
             FileReader reader2 = new FileReader( "src/Couche/Session/S_ecr.txt" );
             FileReader reader3 = new FileReader( "src/Couche/LiasonDonnee/L_ecr.txt" );
             FileReader reader4 = new FileReader( "src/Couche/LiasonDonnee/L_lec.txt" );
             BufferedReader br2 = new BufferedReader( reader2 );
-            BufferedReader br = new BufferedReader(reader);
             BufferedReader br3 = new BufferedReader(reader3);
             BufferedReader br4 = new BufferedReader(reader4);
-            S_lec.read( br, null );
             S_ecr.read( br2, null );
             L_ecr.read( br3, null );
             L_lec.read( br4, null );
 
-            br.close();
             br2.close();
             br3.close();
             br4.close();
@@ -73,7 +83,9 @@ System.out.println("here");
 
 
 
+
     private void button4MouseClicked(MouseEvent e) {
+        System.out.println("Chargement des donnees de demonstration");
         String data =
                 "Firefox       Edge       CONECT\n" +
                         "Firefox       Edge       DATA       hello word\n" +
@@ -102,6 +114,10 @@ System.out.println("here");
             fileWriter.write(data);
             fileWriter.flush();
 System.out.println("Fichier demo chargee");
+            FileReader reader = new FileReader( "src/Couche/Session/S_lec.txt" );
+            BufferedReader br = new BufferedReader(reader);
+            S_lec.read( br, null );
+            br.close();
 fileWriter.close();
 
 
@@ -115,11 +131,13 @@ fileWriter.close();
     private void button3MouseClicked(MouseEvent e) throws IOException {
         generateSlec.RandomData();
         System.out.println("donnees aleatoires generees");
+        FileReader reader = new FileReader( "src/Couche/Session/S_lec.txt" );
+        BufferedReader br = new BufferedReader(reader);
+        S_lec.read( br, null );
+        br.close();
     }
 
-    private void button4(ActionEvent e) {
-        // TODO add your code here
-    }
+
 
 
 
@@ -252,7 +270,7 @@ fileWriter.close();
                     button4MouseClicked(e);
                 }
             });
-            this.button4.addActionListener(e -> button4(e));
+            //this.button4.addActionListener(e -> button4(e));
 
             //---- button3 ----
             this.button3.setText("Regener S_lec");
@@ -309,11 +327,15 @@ fileWriter.close();
             this.button1.addMouseListener(new MouseAdapter() {
                 @Override
                 public void mouseClicked(MouseEvent e) {
-                    button1MouseClicked(e);
-                    button1MouseClicked(e);
+                    try {
+                        button1MouseClicked(e);
+                    } catch (IOException ex) {
+                        throw new RuntimeException(ex);
+                    }
+                    //button1MouseClicked(e);
                 }
             });
-            this.button1.addActionListener(e -> button1(e));
+           // this.button1.addActionListener(e -> button1(e));
 
             GroupLayout panel3Layout = new GroupLayout(this.panel3);
             panel3.setLayout(panel3Layout);

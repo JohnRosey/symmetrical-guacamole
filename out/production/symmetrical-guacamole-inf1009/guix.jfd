@@ -1,0 +1,111 @@
+JFDML JFormDesigner: "7.0.5.1.409" Java: "11.0.13" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		auxiliary() {
+			"JavaCodeGenerator.memberVariableThis": true
+		}
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq {space :p:18:p, par t {comp label1:::p::p, comp label3:::p::p}, space :::p, comp panel1:::p::p, par l {seq {space :::x, par l {comp label2:::p:67:p, comp label4::l:p::p}, space :p:595:p}, seq l {par t {seq t {space :::p, comp panel3:::p::p}, seq l {space :p:124:p, comp panel2:::p::p}}, space :::x}}}}"
+			"$verticalGroup": "par l {seq l {par t:::p {seq l {space :p:18:p, comp label2:::p:16:p, space :p:2:p, comp panel2:::p::p, space :::x, comp label4:::p::p, space :p:84:p, comp panel3:::p::p, space :p:247:p}, seq l {space :::p, par l {comp panel1:::p::p, seq {comp label1:::p::p, space :p:359:p, comp label3:::p:24:p}}}}, space :13:49:x}}"
+		} ) {
+			name: "this"
+			"title": "PROJET DE SESSION INF1009"
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label1"
+				"text": "S_lec"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label4"
+				"text": "L_ecr"
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq l {space :::p, par l:::p {comp scrollPane2::::371:x, comp scrollPane1:::::x}, space :p:68:p, par l {comp scrollPane4:::::x, seq {comp scrollPane3:::p:309:p, space :0:11:x}}, space :::p}}"
+				"$verticalGroup": "par l {seq l {space :::p, par t {comp scrollPane4:::p:302:p, comp scrollPane1:::p:302:p}, space :p:59:p, par l {seq {comp scrollPane2:::p:303:p, space ::15:x}, comp scrollPane3::::318:x}}}"
+			} ) {
+				name: "panel1"
+				"border": new javax.swing.border.SoftBevelBorder( 1, null, null, null, null )
+				add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+					name: "scrollPane2"
+					add( new FormComponent( "javax.swing.JTextArea" ) {
+						name: "L_lec"
+						"font": &Font0 new java.awt.Font( "Monospaced", 3, 10 )
+					} )
+				} )
+				add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+					name: "scrollPane1"
+					add( new FormComponent( "javax.swing.JTextArea" ) {
+						name: "S_lec"
+						"font": #Font0
+					} )
+				} )
+				add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+					name: "scrollPane4"
+					add( new FormComponent( "javax.swing.JTextArea" ) {
+						name: "S_ecr"
+						"font": #Font0
+					} )
+				} )
+				add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+					name: "scrollPane3"
+					add( new FormComponent( "javax.swing.JTextArea" ) {
+						name: "L_ecr"
+						"font": #Font0
+					} )
+				} )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label2"
+				"text": "S_ecr"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label3"
+				"text": "L_lec"
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq {space :::p, par l {comp button3::::233:x, comp button4::::233:x}, space :::p}}"
+				"$verticalGroup": "par l {seq l {space :::p, comp button4:::p::p, space ::28:x, comp button3:::p::p, space :::p}}"
+			} ) {
+				name: "panel2"
+				"border": &BevelBorder0 new javax.swing.border.BevelBorder( 1, null, null, null, null )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "button4"
+					"text": "Demo file"
+					addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "button4MouseClicked", true ) )
+					addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "button4MouseClicked", true ) )
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button4", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "button3"
+					"text": "Regener S_lec"
+					addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "button3MouseClicked", true ) )
+					addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "button3MouseClicked", true ) )
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq l {space :p:20:p, par t {comp button1:::p:170:p, comp button2:::p:155:p}, space ::39:x}}"
+				"$verticalGroup": "par l {seq t {space ::16:x, comp button1:::p::p, space s:::p, comp button2:::p::p, space :::p}}"
+			} ) {
+				name: "panel3"
+				"border": #BevelBorder0
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "button2"
+					"text": "Reset"
+					addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "button2MouseClicked", true ) )
+					addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "button2MouseClicked", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "button1"
+					"text": "Commencer"
+					addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "button1MouseClicked", true ) )
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button1", true ) )
+					addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "button1MouseClicked", true ) )
+				} )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 25, 5 )
+			"size": new java.awt.Dimension( 1235, 770 )
+		} )
+	}
+}
