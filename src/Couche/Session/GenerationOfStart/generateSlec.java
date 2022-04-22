@@ -93,13 +93,9 @@ public class generateSlec {
 
 
         // Collections.shuffle((List<HashMap) data.values());
-        //Collections.shuffle(Arrays.asList(data));
-        //Collections.shuffle(Collections.singletonList(data));
 
         TypeTrans.add("CONNECT");
         TypeTrans.add("DATA");
-       // data.forEach((k, v) ->
-               // TypeTrans.add(" "+"DATA"+" " + k + v));
         TypeTrans.add("LIB");
 
 
@@ -114,26 +110,6 @@ public class generateSlec {
         //Collections.shuffle(TypeTrans);
         /*donnees du fichier S_Lec*/
 
-/*
-fw.write(
-        "Firefox       Edge       CONECT\n" +
-        "Firefox       Edge       DATA       hello word\n" +
-        "Firefox       Edge       LIB\n" +
-        "Chrome       Firefox       CONECT\n" +
-        "Chrome       Firefox       DATA       my enemey\n" +
-        "Chrome       Firefox       LIB\n" +
-        "Brave       Edge       DATA      887499887yu6867u5756u\n" +
-        "Firefox       Brave       CONECT\n" +
-        "Edge       Brave       DATA       nice\n" +
-        "Edge       Chrome       DATA       y6546¬¦¤¢¬345432\n" +
-        "Brave       Firefox       LIB\n" +
-        "1234        22          CONECT      UNDERCORVER\n" +
-        "22          1234        DATA        hello\n" +
-        "22          1234        LIB\n" +
-        "1234        22          CONECT      UNDERCORVER\n" +
-        "22          1234        DATA        hello\n" +
-        "22          1234        LIB");
-*/
         for (int i = 0; i < 3; i++) {
             try {
                 fw.write(NameAppSource.get(i) + "       " + NameAppDest.get(i) + "       " + TypeTrans.get(1) + " " + data.get(i) + "\n");
@@ -166,10 +142,6 @@ fw.write(
 
 String transaction = "";
         ArrayList<String> transactions = fileUtility.Read("text.txt");
-        //String typeTrans = transaction.split(" {7}", 4)[2];
-//if (typeTrans.equals("DATA"))
-//fw.write(data.toString());
-//fw.write(TypeTrans.toString());
 
         try {
             fw.close();

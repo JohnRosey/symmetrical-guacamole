@@ -1,24 +1,14 @@
-1234 a recu la primitive  Primitive : N_Disconnect.Ind {  adresseReponse = 156, raison = refus de connexion de la part du distant }
-1234{adresse: 156} déconnecté du  22adresse de provenance 9, Raison: refus de connexion de la part du distant
-1234 a recu la primitive  Primitive : N_Disconnect.Ind {  adresseReponse = 156, raison = refus de connexion de la part du distant }
-1234{adresse: 156} déconnecté du  22adresse de provenance 9, Raison: refus de connexion de la part du distant
-22 a recu la primitive  Primitive : N_Disconnect.Ind {  adresseReponse = 95, raison = la demande ne reçoit pas de réponse }
-22{adresse: 95} déconnecté du    1234adresse de provenance 44, Raison: la demande ne reçoit pas de réponse
-Brave a recu la primitive  Primitive :N_Connect.Conf {  adresseReponse = 237 }
-Brave a réussi à se connecter au Edge, adresse de provenance: 237, adresse destination: 47 Etat: connexion_etablie
-22 a recu la primitive  Primitive : N_Disconnect.Ind {  adresseReponse = 95, raison = la demande ne reçoit pas de réponse }
-22{adresse: 95} déconnecté du    1234adresse de provenance 44, Raison: la demande ne reçoit pas de réponse
-22 a recu la primitive  Primitive : N_Disconnect.Ind {  adresseReponse = 95, raison = la demande ne reçoit pas de réponse }
-22{adresse: 95} déconnecté du    1234adresse de provenance 44, Raison: la demande ne reçoit pas de réponse
-22 a recu la primitive  Primitive : N_Disconnect.Ind {  adresseReponse = 95, raison = la demande ne reçoit pas de réponse }
-22{adresse: 95} déconnecté du    1234adresse de provenance 44, Raison: la demande ne reçoit pas de réponse
-Edge a recu la primitive  Primitive :N_Connect.Conf {  adresseReponse = 47 }
-Edge a réussi à se connecter au Chrome, adresse de provenance: 47, adresse destination: 94 Etat: connexion_etablie
-Chrome a recu la primitive  Primitive :N_Connect.Conf {  adresseReponse = 94 }
-Chrome a réussi à se connecter au Firefox, adresse de provenance: 94, adresse destination: 78 Etat: connexion_etablie
-Edge a recu la primitive  Primitive :N_Connect.Conf {  adresseReponse = 47 }
-Edge a réussi à se connecter au Brave, adresse de provenance: 47, adresse destination: 237 Etat: connexion_etablie
-Firefox a recu la primitive  Primitive : N_Disconnect.Ind {  adresseReponse = 78, raison = refus de connexion de la part du distant }
-Firefox{adresse: 78} déconnecté du Braveadresse de provenance 237, Raison: refus de connexion de la part du distant
-Firefox a recu la primitive  Primitive : N_Disconnect.Ind {  adresseReponse = 78, raison = refus de connexion de la part du distant }
-Firefox{adresse: 78} déconnecté du Edgeadresse de provenance 47, Raison: refus de connexion de la part du distant
+Gmail.exe a recu la primitive  Primitive :N_Connect.Conf {  adresseReponse = 86 }
+Gmail.exe a réussi à se connecter au Ads.exe, adresse de provenance: 86, adresse destination: 56 Etat: connexion_etablie
+Google.exe a recu la primitive  Primitive :N_Connect.Conf {  adresseReponse = 69 }
+Google.exe a réussi à se connecter au Firebase.exe, adresse de provenance: 69, adresse destination: 35 Etat: connexion_etablie
+Whatsapp.exe a recu la primitive  Primitive : N_Disconnect.Ind {  adresseReponse = 228, raison = la demande ne reçoit pas de réponse }
+Whatsapp.exe{adresse: 228} déconnecté du Costco.exeadresse de provenance 212, Raison: la demande ne reçoit pas de réponse
+Gmail.exe est déconnecté du  Ads.exe
+, Raison: disconnected Closed by Client 
+
+Google.exe est déconnecté du  Firebase.exe
+, Raison: disconnected Closed by Client 
+
+Whatsapp.exe a recu la primitive  Primitive : N_Disconnect.Ind {  adresseReponse = 228, raison = la demande ne reçoit pas de réponse }
+Whatsapp.exe{adresse: 228} déconnecté du Costco.exeadresse de provenance 212, Raison: la demande ne reçoit pas de réponse

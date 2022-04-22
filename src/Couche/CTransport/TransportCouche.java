@@ -12,9 +12,8 @@ import java.util.concurrent.atomic.AtomicReference;
 
 import static java.lang.Thread.sleep;
 
-/*
-la couche transport
- */
+
+@SuppressWarnings("ALL")
 public class TransportCouche {
     private final ArrayList<Communication> TCT;
 
@@ -38,106 +37,11 @@ public class TransportCouche {
         fileUtility.Erase("src/Couche/LiasonDonnee/L_ecr.txt");
         fileUtility.Erase("src/Couche/LiasonDonnee/L_lec.txt");
     }
-
-    /**
-    cette methode est le point d'entree du programme:
-    1.lire chaque ligne(transaction) de fichier S_lec ,
-    2.pour chaque ligne, utiliser le thread Synchronisation pour le traiter
-     */
-    public void DemarrerCommunication() {
-        //lire tous les transaction et les stoker dans un list
-        ArrayList<String> transactions = fileUtility.Read("src/Couche/Session/S_lec.txt");
-
-        /*
-
-        2.un thread = un appel du methode gererTransactions(str)
-         */
-        transactions.parallelStream().forEach(str -> {
-            try {
-                gererTransactions(str);
-            } catch (InterruptedException e) {
-                System.err.println("erreur de thread");
-            }
-        });
-
-
-    }
-
-    /*
-      cette methode pemet de gerer une transaction(chaque ligne) du fichier S_lec
-      en ulitisent le mot cle "synchronized",pour permet de gerer les threads en mode Synchronisation
-     */
-    public synchronized void gererTransactions( String transaction) throws InterruptedException {
-        sleep(0xaL);
-
-        String appSource = transaction.split(" {7}", 4)[0];
-        String appDestination = transaction.split(" {7}", 4)[1];
-        String typeTrans = transaction.split(" {7}", 4)[2];
-
-
-        //chercher la communication entre  lemetteur et recepteur)
-        Communication communication = rechercheCommunication(appSource, appDestination);
-
-
-        if (typeTrans.equals("LIB")) {//si c'est une demande de liberation
-
-            if (communication != null && communication.getEtatConnexion() == state.connexion_etablie) {
-
-                ecrire_vers_reseau(communication.getId(), new NDisconnectReq(communication.getAdrSource()));
-
-                TCT.remove(communication);
-
-                //ecrire le resultat dans fihcier S_ecr
-                String msg_to_S_ecr = communication.getAppSource() + " "+"est déconnecté du "+ " " + communication.getAppDestination() + "\n"+
-                        ", Raison: disconnected Closed by Client \n";
-                
-                fileUtility.write(msg_to_S_ecr, "src/Couche/Session/S_ecr.txt");
-            }
-            return;
-        }//si le type de transation est envoyer le data ou demande de connexion
-
-        //verfier si ce app a deja communicate avec la couche transport
-        if (communication != null && communication.getEtatConnexion() == state.connexion_etablie) {
-            //si c'est une demande d'envoyer le data
-            if (typeTrans.equals("DATA")) {
-                //envoyer  la primitive NDataReq a la couche reseau
-                communication.setData(transaction.split(" {7}", 4)[3]);
-                ecrire_vers_reseau(communication.getId(), new NDataReq(communication.getData()));
-            }
-        } else {//sion, peu import le type de transation est DATA ou CONECT,
-            //on va d'abord essayer d'etablir la connexion
-
-            //generer l'adresse source et l'adresse destination
-            int[] adresses = AdresseGestionnaire.genererAdresses(appSource, appDestination);
-
-            //creer une nouveau object Communication
-            Communication newCon = new Communication(counter++, appSource, appDestination, state.en_attente_de_confirmation_etablissement,
-                    adresses[0], adresses[1]);
-
-            //l'ajoute dans la table TCT
-            TCT.add(newCon);
-
-            //si c'est une demande d'envoyer les donnees,
-            if (typeTrans.equals("DATA"))
-                //stocker les user donnes dans l'object newCon
-                newCon.setData(transaction.split(" {7}", 4)[3]);
-
-
-            //enovoyer le prrmitive nConnectReq , avec l'identifiant d'extremite
-            NConnectReq nConnectReq = new NConnectReq(adresses[0], adresses[1]);
-            ecrire_vers_reseau(newCon.getId(), nConnectReq);
-
-        }
-        sleep(10L);
-    }
-
-    //une methode pour envoyer les Primitives et id vers couche reseau
     private void ecrire_vers_reseau(int id, Primitive p) {
         reseaux.lire_de_transport(id, p);
     }
 
-    //une methode pour recevoir les Primitives et id de couche reseau
-    public void lire_de_reseau(int id,  Primitive p) {
+    public void lire_de_reseau(int id, Primitive p) {
         String Filepath = "src/Couche/Session/S_ecr.txt";
 
         if (p.getClass() == NDisconnectInd.class) { //si c'est une primitive NDisconnectInd
@@ -187,10 +91,86 @@ public class TransportCouche {
         }
     }
 
+    public void DemarrerCommunication() {
+        ArrayList<String> transactions = fileUtility.Read("src/Couche/Session/S_lec.txt");
 
 
-//    une methode qui premet de trouver un object Communication par le nom de app source
-//    et le nom de app destination
+        transactions.parallelStream().forEach(str -> {
+            try {
+                gererTransactions(str);
+            } catch (InterruptedException e) {
+                System.err.println("erreur de thread");
+            }
+        });
+
+
+    }
+
+
+    public synchronized void gererTransactions( String transaction) throws InterruptedException {
+        sleep(0xaL);
+
+        String appSource = transaction.split(" {7}", 4)[0];
+        String appDestination = transaction.split(" {7}", 4)[1];
+        String typeTrans = transaction.split(" {7}", 4)[2];
+
+
+        //chercher la communication entre  lemetteur et recepteur)
+        Communication communication = rechercheCommunication(appSource, appDestination);
+
+
+        if ("LIB".equals(typeTrans)) {//si c'est une demande de liberation
+
+            if (communication != null && communication.getEtatConnexion() == state.connexion_etablie) {
+
+                ecrire_vers_reseau(communication.getId(), new NDisconnectReq(communication.getAdrSource()));
+
+                TCT.remove(communication);
+
+                //ecrire le resultat dans fihcier S_ecr
+                String msg_to_S_ecr = communication.getAppSource() + " " + "est déconnecté du " + " " + communication.getAppDestination() + "\n" +
+                        ", Raison: disconnected Closed by Client \n";
+
+                fileUtility.write(msg_to_S_ecr, "src/Couche/Session/S_ecr.txt");
+            }
+            return;
+        }
+
+        //verfier si ce app a deja communicate avec la couche transport
+        if (communication != null && communication.getEtatConnexion() == state.connexion_etablie) {
+            //si c'est une demande d'envoyer le data
+            if (typeTrans.equals("DATA")) {
+                //envoyer  la primitive NDataReq a la couche reseau
+                communication.setData(transaction.split(" {7}", 4)[3]);
+                ecrire_vers_reseau(communication.getId(), new NDataReq(communication.getData()));
+            }
+        } else {//sion, peu import le type de transation est DATA ou CONECT,
+            //on va d'abord essayer d'etablir la connexion
+
+            //generer l'adresse source et l'adresse destination
+            int[] adresses = AdresseGestionnaire.genererAdresses(appSource, appDestination);
+
+            //creer une nouveau object Communication
+            Communication newCon = new Communication(counter++, appSource, appDestination, state.en_attente_de_confirmation_etablissement,
+                    adresses[0], adresses[1]);
+
+            //l'ajoute dans la table TCT
+            TCT.add(newCon);
+
+            //si c'est une demande d'envoyer les donnees,
+            if (typeTrans.equals("DATA"))
+                //stocker les user donnes dans l'object newCon
+                newCon.setData(transaction.split(" {7}", 4)[3]);
+
+
+            //enovoyer le prrmitive nConnectReq , avec l'identifiant d'extremite
+            NConnectReq nConnectReq = new NConnectReq(adresses[0], adresses[1]);
+            ecrire_vers_reseau(newCon.getId(), nConnectReq);
+
+        }
+        sleep(10L);
+    }
+
     private Communication rechercheCommunication(String nomSrc, String nomDes)
     {
         return switch (TCT.size()) {

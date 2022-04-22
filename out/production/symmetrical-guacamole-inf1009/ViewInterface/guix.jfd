@@ -1,4 +1,4 @@
-JFDML JFormDesigner: "7.0.5.1.409" Java: "11.0.13" encoding: "UTF-8"
+JFDML JFormDesigner: "7.0.5.4.420" Java: "11.0.14.1" encoding: "UTF-8"
 
 new FormModel {
 	contentType: "form/swing"
@@ -7,8 +7,8 @@ new FormModel {
 			"JavaCodeGenerator.memberVariableThis": true
 		}
 		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-			"$horizontalGroup": "par l {seq {space :p:18:p, par t {comp label1:::p::p, comp label3:::p::p}, space :::p, comp panel1:::p::p, par l {seq {space :::x, par l {comp label2:::p:67:p, comp label4::l:p::p}, space :p:595:p}, seq l {par t {seq t {space :::p, comp panel3:::p::p}, seq l {space :p:124:p, comp panel2:::p::p}}, space :::x}}}}"
-			"$verticalGroup": "par l {seq l {par t:::p {seq l {space :p:18:p, comp label2:::p:16:p, space :p:2:p, comp panel2:::p::p, space :::x, comp label4:::p::p, space :p:84:p, comp panel3:::p::p, space :p:247:p}, seq l {space :::p, par l {comp panel1:::p::p, seq {comp label1:::p::p, space :p:359:p, comp label3:::p:24:p}}}}, space :13:49:x}}"
+			"$horizontalGroup": "par l {seq {space :p:18:p, par t {comp label1:::p::p, comp label3:::p::p}, space :::p, comp panel1:::p::p, par l {seq {space :::x, par l {comp label2:::p:67:p, comp label4:::p::p}, space :p:326:p}, seq l {par t {seq l {space :p:124:p, comp panel2:::p::p}, seq t {space :::p, par l {comp panel3:::p::p, comp panel4:::p:218:p}}}, space :::x}}}}"
+			"$verticalGroup": "par l {seq l {par t:::p {seq l {space :p:18:p, comp label2:::p:16:p, space :p:2:p, comp panel2:::p::p, space :::x, comp panel3:::p::p, space :::p, comp label4:::p::p, space :p:51:p, comp panel4:::p:201:p, space :p:53:p}, seq l {space :::p, par l {comp panel1:::p::p, seq {comp label1:::p::p, space :p:359:p, comp label3:::p:24:p}}}}, space :13:48:x}}"
 		} ) {
 			name: "this"
 			"title": "PROJET DE SESSION INF1009"
@@ -101,6 +101,35 @@ new FormModel {
 					addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "button1MouseClicked", true ) )
 					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button1", true ) )
 					addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "button1MouseClicked", true ) )
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class net.miginfocom.swing.MigLayout ) {
+				"$layoutConstraints": "hidemode 3"
+				"$columnConstraints": "[fill][fill][fill]"
+				"$rowConstraints": "[][][]"
+			} ) {
+				name: "panel4"
+				"border": new javax.swing.border.BevelBorder( 1, null, null, null, null )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "button5"
+					"text": "Openn S_ecr"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button5", true ) )
+				}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+					"value": "cell 2 0"
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "button6"
+					"text": "Open L_ecr"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button6", true ) )
+				}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+					"value": "cell 2 1"
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "button7"
+					"text": "Open L_lec"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button7", true ) )
+				}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+					"value": "cell 2 2"
 				} )
 			} )
 		}, new FormLayoutConstraints( null ) {

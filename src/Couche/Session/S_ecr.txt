@@ -1,0 +1,19 @@
+1234 a recu la primitive  Primitive :N_Connect.Conf {  adresseReponse = 14 }
+1234 a réussi à se connecter au  22, adresse de provenance: 14, adresse destination: 176 Etat: connexion_etablie
+Chrome a recu la primitive  Primitive :N_Connect.Conf {  adresseReponse = 8 }
+Chrome a réussi à se connecter au Firefox, adresse de provenance: 8, adresse destination: 233 Etat: connexion_etablie
+Brave a recu la primitive  Primitive : N_Disconnect.Ind {  adresseReponse = 52, raison = refus de connexion de la part du distant }
+Brave{adresse: 52} déconnecté du Edgeadresse de provenance 71, Raison: refus de connexion de la part du distant
+Firefox a recu la primitive  Primitive :N_Connect.Conf {  adresseReponse = 233 }
+Firefox a réussi à se connecter au Edge, adresse de provenance: 233, adresse destination: 71 Etat: connexion_etablie
+22 a recu la primitive  Primitive :N_Connect.Conf {  adresseReponse = 184 }
+22 a réussi à se connecter au    1234, adresse de provenance: 184, adresse destination: 104 Etat: connexion_etablie
+Firefox a recu la primitive  Primitive :N_Connect.Conf {  adresseReponse = 233 }
+Firefox a réussi à se connecter au Brave, adresse de provenance: 233, adresse destination: 52 Etat: connexion_etablie
+Edge a recu la primitive  Primitive :N_Connect.Conf {  adresseReponse = 71 }
+Edge a réussi à se connecter au Brave, adresse de provenance: 71, adresse destination: 52 Etat: connexion_etablie
+Chrome est déconnecté du  Firefox
+, Raison: disconnected Closed by Client 
+
+Edge a recu la primitive  Primitive :N_Connect.Conf {  adresseReponse = 71 }
+Edge a réussi à se connecter au Chrome, adresse de provenance: 71, adresse destination: 8 Etat: connexion_etablie

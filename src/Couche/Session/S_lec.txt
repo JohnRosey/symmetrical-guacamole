@@ -1,9 +1,17 @@
-Facebook.exe       AWS.exe       DATA Computer is a
-Youtube.exe       Costco.exe       DATA Phone is b
-Microsoft.exe       reddit.exe       DATA Tablet is cc
-Facebook.exe       AWS.exe       LIB
-Youtube.exe       Costco.exe       LIB
-Microsoft.exe       reddit.exe       LIB
-Facebook.exe       AWS.exe       CONNECT
-Youtube.exe       Costco.exe       CONNECT
-Microsoft.exe       reddit.exe       CONNECT
+Firefox       Edge       CONECT
+Firefox       Edge       DATA       hello word
+Firefox       Edge       LIB
+Chrome       Firefox       CONECT
+Chrome       Firefox       DATA       my enemey
+Chrome       Firefox       LIB
+Brave       Edge       DATA      887499887yu6867u5756u
+Firefox       Brave       CONECT
+Edge       Brave       DATA       nice
+Edge       Chrome       DATA       y6546¬¦¤¢¬345432
+Brave       Firefox       LIB
+1234        22          CONECT      UNDERCORVER
+22          1234        DATA        hello
+22          1234        LIB
+1234        22          CONECT      UNDERCORVER
+22          1234        DATA        hello
+22          1234        LIB

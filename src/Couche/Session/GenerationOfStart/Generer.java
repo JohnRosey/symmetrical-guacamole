@@ -67,13 +67,9 @@ public   class Generer  {
 
 
         // Collections.shuffle((List<HashMap) data.values());
-        //Collections.shuffle(Arrays.asList(data));
-        //Collections.shuffle(Collections.singletonList(data));
 
         TypeTrans.add("CONNECT");
         TypeTrans.add("DATA");
-        // data.forEach((k, v) ->
-        // TypeTrans.add(" "+"DATA"+" " + k + v));
         TypeTrans.add("LIB");
 
 
@@ -113,10 +109,6 @@ public   class Generer  {
 
         String transaction = "";
         ArrayList<String> transactions = fileUtility.Read("text.txt");
-        //String typeTrans = transaction.split(" {7}", 4)[2];
-//if (typeTrans.equals("DATA"))
-//fw.write(data.toString());
-//fw.write(TypeTrans.toString());
 
         try {
             fw.close();

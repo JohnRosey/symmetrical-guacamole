@@ -1,16 +1,13 @@
 package Couche.CTransport;
 import Enum.state;
 
-/*
-une classe qui presenter une communication entre deux extremite,
-les deux extremite peuvent etre deja connecte ou non connecte.
- */
+
 public class Communication {
-    int id;//identifiant d’extrémité de connexion
+    final int id;
     private final String appSource;
-    private String appDestination;
+    private final String appDestination;
     private state state;
-    private String Data;//les donnees que a envoyer
+    private String Data;
     private int adrSource,adrDestination;
 
     public Communication(int id, String appSource, String appDestination, state state, int adSource, int adDestination) {
