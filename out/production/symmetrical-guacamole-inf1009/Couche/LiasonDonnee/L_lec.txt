@@ -1,4 +1,15 @@
-Paquet d'Appel {  numeroConnexion= 1, typeDePaquet= 00001011 adresseSource = 86, adrDestination = 56 }a recu la réponse: PaquetDeCommunicationEtablie {  numeroConnexion= 1, typeDePaquet= 00001111 adresseSource = 86, adrDestination = 56 }
-Paquet d'Appel {  numeroConnexion= 2, typeDePaquet= 00001011 adresseSource = 69, adrDestination = 35 }a recu la réponse: PaquetDeCommunicationEtablie {  numeroConnexion= 2, typeDePaquet= 00001111 adresseSource = 69, adrDestination = 35 }
-Paquet d'Appel {  numeroConnexion= 3, typeDePaquet= 00001011 adresseSource = 228, adrDestination = 212 } ne reçoit pas de réponse
-Paquet d'Appel {  numeroConnexion= 4, typeDePaquet= 00001011 adresseSource = 228, adrDestination = 212 } ne reçoit pas de réponse
+Paquet d'Appel {  numeroConnexion= 1, typeDePaquet= 00001011 adresseSource = 128, adrDestination = 64 }a recu la réponse: PaquetDeCommunicationEtablie {  numeroConnexion= 1, typeDePaquet= 00001111 adresseSource = 128, adrDestination = 64 }
+Paquet d'Appel {  numeroConnexion= 2, typeDePaquet= 00001011 adresseSource = 201, adrDestination = 54 }a recu la réponse: PaquetDeCommunicationEtablie {  numeroConnexion= 2, typeDePaquet= 00001111 adresseSource = 201, adrDestination = 54 }
+PaquetDonnee {  numeroConnexion= 3, typeDePaquet= 00000000 donnee = hello word } a recu une aquittement positive : { numero de connexion = 3, typeDePaquet = 00100001 }
+PaquetDonnee {  numeroConnexion= 3, typeDePaquet= 00000000 donnee = hello word } a recu une aquittement negative : { numero de connexion = 3, typeDePaquet = 00001001 }
+Paquet d'Appel {  numeroConnexion= 3, typeDePaquet= 00001011 adresseSource = 17, adrDestination = 28 }a recu la réponse: PaquetDeCommunicationEtablie {  numeroConnexion= 3, typeDePaquet= 00001111 adresseSource = 17, adrDestination = 28 }
+Paquet d'Appel {  numeroConnexion= 4, typeDePaquet= 00001011 adresseSource = 77, adrDestination = 28 }a recu la réponse: PaquetDeCommunicationEtablie {  numeroConnexion= 4, typeDePaquet= 00001111 adresseSource = 77, adrDestination = 28 }
+Paquet d'Appel {  numeroConnexion= 5, typeDePaquet= 00001011 adresseSource = 44, adrDestination = 17 }a recu la réponse: PaquetDeCommunicationEtablie {  numeroConnexion= 5, typeDePaquet= 00001111 adresseSource = 44, adrDestination = 17 }
+PaquetDonnee {  numeroConnexion= 6, typeDePaquet= 00000000 donnee = my enemey } a recu une aquittement positive : { numero de connexion = 6, typeDePaquet = 00100001 }
+Paquet d'Appel {  numeroConnexion= 6, typeDePaquet= 00001011 adresseSource = 44, adrDestination = 17 }a recu la réponse: PaquetDeCommunicationEtablie {  numeroConnexion= 6, typeDePaquet= 00001111 adresseSource = 44, adrDestination = 17 }
+PaquetDonnee {  numeroConnexion= 7, typeDePaquet= 00000000 donnee = y6546¬¦¤¢¬345432 } a recu une aquittement positive : { numero de connexion = 7, typeDePaquet = 00100001 }
+Paquet d'Appel {  numeroConnexion= 7, typeDePaquet= 00001011 adresseSource = 28, adrDestination = 44 }a recu la réponse: PaquetDeCommunicationEtablie {  numeroConnexion= 7, typeDePaquet= 00001111 adresseSource = 28, adrDestination = 44 }
+Paquet d'Appel {  numeroConnexion= 8, typeDePaquet= 00001011 adresseSource = 17, adrDestination = 77 }a recu la réponse: PaquetDeCommunicationEtablie {  numeroConnexion= 8, typeDePaquet= 00001111 adresseSource = 17, adrDestination = 77 }
+PaquetDonnee {  numeroConnexion= 9, typeDePaquet= 00000000 donnee = nice } a recu une aquittement negative : { numero de connexion = 9, typeDePaquet = 00001001 }
+PaquetDonnee {  numeroConnexion= 9, typeDePaquet= 00000000 donnee = nice } a recu une aquittement negative : { numero de connexion = 9, typeDePaquet = 00001001 }
+Paquet d'Appel {  numeroConnexion= 9, typeDePaquet= 00001011 adresseSource = 28, adrDestination = 77 }a recu la réponse: PaquetDeCommunicationEtablie {  numeroConnexion= 9, typeDePaquet= 00001111 adresseSource = 28, adrDestination = 77 }

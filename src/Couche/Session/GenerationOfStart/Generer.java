@@ -1,3 +1,8 @@
+/*
+ *  By GANSONRE ISMAEL
+ *  * Copyright (c) 2022 GANSONRE ISMAEL. All rights reserved.
+ */
+
 package Couche.Session.GenerationOfStart;
 
 import Outil.fileUtility;
@@ -108,7 +113,7 @@ public   class Generer  {
 
 
         String transaction = "";
-        ArrayList<String> transactions = fileUtility.Read("text.txt");
+        ArrayList<String> transactions = fileUtility.Lire_File("text.txt");
 
         try {
             fw.close();

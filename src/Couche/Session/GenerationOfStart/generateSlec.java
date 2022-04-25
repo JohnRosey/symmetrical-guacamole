@@ -1,14 +1,15 @@
+/*
+ *  By GANSONRE ISMAEL
+ *  * Copyright (c) 2022 GANSONRE ISMAEL. All rights reserved.
+ */
+
 package Couche.Session.GenerationOfStart;
 
 import Outil.fileUtility;
 
 import java.io.*;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 
 public class generateSlec {
@@ -141,7 +142,7 @@ public class generateSlec {
 
 
 String transaction = "";
-        ArrayList<String> transactions = fileUtility.Read("text.txt");
+        ArrayList<String> transactions = fileUtility.Lire_File("text.txt");
 
         try {
             fw.close();

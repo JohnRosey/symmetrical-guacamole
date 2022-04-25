@@ -1,9 +1,17 @@
-Gmail.exe       Ads.exe       DATA Computer is a
-Google.exe       Firebase.exe       DATA Phone is b
-Whatsapp.exe       Costco.exe       DATA Tablet is cc
-Gmail.exe       Ads.exe       LIB
-Google.exe       Firebase.exe       LIB
-Whatsapp.exe       Costco.exe       LIB
-Gmail.exe       Ads.exe       CONNECT
-Google.exe       Firebase.exe       CONNECT
-Whatsapp.exe       Costco.exe       CONNECT
+Firefox       Edge       CONECT
+Firefox       Edge       DATA       hello word
+Firefox       Edge       LIB
+Chrome       Firefox       CONECT
+Chrome       Firefox       DATA       my enemey
+Chrome       Firefox       LIB
+Brave       Edge       DATA      887499887yu6867u5756u
+Firefox       Brave       CONECT
+Edge       Brave       DATA       nice
+Edge       Chrome       DATA       y6546¬¦¤¢¬345432
+Brave       Firefox       LIB
+1234        22          CONECT      UNDERCORVER
+22          1234        DATA        hello
+22          1234        LIB
+1234        22          CONECT      UNDERCORVER
+22          1234        DATA        hello
+22          1234        LIB

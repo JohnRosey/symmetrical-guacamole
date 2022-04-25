@@ -1,3 +1,8 @@
+/*
+ *  By GANSONRE ISMAEL
+ *  * Copyright (c) 2022 GANSONRE ISMAEL. All rights reserved.
+ */
+
 package ViewInterface;
 
 import java.awt.*;
@@ -14,11 +19,6 @@ import java.awt.event.MouseEvent;
 import java.io.*;
 
 import net.miginfocom.swing.*;
-/*
- * Created by JFormDesigner on Wed Apr 20 02:41:17 EDT 2022
- * By GANSONRE ISMAEL
- * Copyright (c) 2020 GANSONRE ISMAEL. All rights reserved.
- */
 
 
 /**

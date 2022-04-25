@@ -1,6 +1,9 @@
-package Outil;
+/*
+ *  By GANSONRE ISMAEL
+ *  * Copyright (c) 2022 GANSONRE ISMAEL. All rights reserved.
+ */
 
-import com.sun.jdi.connect.Transport;
+package Outil;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -14,7 +17,7 @@ public class fileUtility {
      * @param fichierPath
      * @return Le contenue du chemin du fichier passee au main
      */
-    public static ArrayList<String> Read(String fichierPath) {
+    public static ArrayList<String> Lire_File(String fichierPath) {
         File file = new File(fichierPath);
         boolean boo = file.exists() && file.isFile();
         ArrayList<String> strs = new ArrayList<>();

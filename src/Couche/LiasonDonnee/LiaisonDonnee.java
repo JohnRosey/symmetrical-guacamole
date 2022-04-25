@@ -1,3 +1,8 @@
+/*
+ *  By GANSONRE ISMAEL
+ *  * Copyright (c) 2022 GANSONRE ISMAEL. All rights reserved.
+ */
+
 package Couche.LiasonDonnee;
 
 import Couche.CReseaux.Connexion;
@@ -16,10 +21,10 @@ public class LiaisonDonnee {
 
         fileUtility.write("Envoi du " + p.toString(), "src/Couche/LiasonDonnee/L_ecr.txt");
 
-        processusAleatoire(p);
+        RandomProcess(p);
     }
 
-    public void processusAleatoire(Paquet p) {
+    public void RandomProcess(Paquet p) {
 
         if (p.getClass() == PaquetAppel.class)
             reponseConnexionAleatoire(p);

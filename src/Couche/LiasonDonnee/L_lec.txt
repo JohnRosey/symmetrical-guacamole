@@ -1,12 +1,4 @@
-Paquet d'Appel {  numeroConnexion= 1, typeDePaquet= 00001011 adresseSource = 14, adrDestination = 176 }a recu la réponse: PaquetDeCommunicationEtablie {  numeroConnexion= 1, typeDePaquet= 00001111 adresseSource = 14, adrDestination = 176 }
-Paquet d'Appel {  numeroConnexion= 2, typeDePaquet= 00001011 adresseSource = 8, adrDestination = 233 }a recu la réponse: PaquetDeCommunicationEtablie {  numeroConnexion= 2, typeDePaquet= 00001111 adresseSource = 8, adrDestination = 233 }
-Paquet d'Appel {  numeroConnexion= 3, typeDePaquet= 00001011 adresseSource = 52, adrDestination = 71 }a recu la réponse: PaquetIndLiberation {  numeroConnexion= 3, typeDePaquet= 00010011 adrSource = 52, adrDestination = 71, raison = 00000001' }
-PaquetDonnee {  numeroConnexion= 2, typeDePaquet= 00000000 donnee = my enemey } a recu une aquittement positive : { numero de connexion = 2, typeDePaquet = 00100001 }
-PaquetDonnee {  numeroConnexion= 4, typeDePaquet= 00000000 donnee = hello word } a recu une aquittement positive : { numero de connexion = 4, typeDePaquet = 00100001 }
-Paquet d'Appel {  numeroConnexion= 4, typeDePaquet= 00001011 adresseSource = 233, adrDestination = 71 }a recu la réponse: PaquetDeCommunicationEtablie {  numeroConnexion= 4, typeDePaquet= 00001111 adresseSource = 233, adrDestination = 71 }
-Paquet d'Appel {  numeroConnexion= 5, typeDePaquet= 00001011 adresseSource = 184, adrDestination = 104 }a recu la réponse: PaquetDeCommunicationEtablie {  numeroConnexion= 5, typeDePaquet= 00001111 adresseSource = 184, adrDestination = 104 }
-Paquet d'Appel {  numeroConnexion= 6, typeDePaquet= 00001011 adresseSource = 233, adrDestination = 52 }a recu la réponse: PaquetDeCommunicationEtablie {  numeroConnexion= 6, typeDePaquet= 00001111 adresseSource = 233, adrDestination = 52 }
-PaquetDonnee {  numeroConnexion= 7, typeDePaquet= 00000000 donnee = nice } a recu une aquittement positive : { numero de connexion = 7, typeDePaquet = 00100001 }
-Paquet d'Appel {  numeroConnexion= 7, typeDePaquet= 00001011 adresseSource = 71, adrDestination = 52 }a recu la réponse: PaquetDeCommunicationEtablie {  numeroConnexion= 7, typeDePaquet= 00001111 adresseSource = 71, adrDestination = 52 }
-PaquetDonnee {  numeroConnexion= 8, typeDePaquet= 00000000 donnee = y6546¬¦¤¢¬345432 } a recu une aquittement positive : { numero de connexion = 8, typeDePaquet = 00100001 }
-Paquet d'Appel {  numeroConnexion= 8, typeDePaquet= 00001011 adresseSource = 71, adrDestination = 8 }a recu la réponse: PaquetDeCommunicationEtablie {  numeroConnexion= 8, typeDePaquet= 00001111 adresseSource = 71, adrDestination = 8 }
+Paquet d'Appel {  numeroConnexion= 1, typeDePaquet= 00001011 adresseSource = 116, adrDestination = 72 }a recu la réponse: PaquetDeCommunicationEtablie {  numeroConnexion= 1, typeDePaquet= 00001111 adresseSource = 116, adrDestination = 72 }
+Paquet d'Appel {  numeroConnexion= 2, typeDePaquet= 00001011 adresseSource = 95, adrDestination = 160 } ne reçoit pas de réponse
+Paquet d'Appel {  numeroConnexion= 3, typeDePaquet= 00001011 adresseSource = 95, adrDestination = 160 } ne reçoit pas de réponse
+Paquet d'Appel {  numeroConnexion= 4, typeDePaquet= 00001011 adresseSource = 41, adrDestination = 242 }a recu la réponse: PaquetDeCommunicationEtablie {  numeroConnexion= 4, typeDePaquet= 00001111 adresseSource = 41, adrDestination = 242 }

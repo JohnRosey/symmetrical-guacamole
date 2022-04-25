@@ -1,3 +1,8 @@
+/*
+ *  By GANSONRE ISMAEL
+ *  * Copyright (c) 2022 GANSONRE ISMAEL. All rights reserved.
+ */
+
 package Couche.CTransport;
 
 import Enum.state;
@@ -92,7 +97,7 @@ public class TransportCouche {
     }
 
     public void DemarrerCommunication() {
-        ArrayList<String> transactions = fileUtility.Read("src/Couche/Session/S_lec.txt");
+        ArrayList<String> transactions = fileUtility.Lire_File("src/Couche/Session/S_lec.txt");
 
 
         transactions.parallelStream().forEach(str -> {

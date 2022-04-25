@@ -1,3 +1,8 @@
+/*
+ *  By GANSONRE ISMAEL
+ *  * Copyright (c) 2022 GANSONRE ISMAEL. All rights reserved.
+ */
+
 package Couche.CReseaux;
 
 import Couche.CTransport.TransportCouche;
@@ -33,7 +38,7 @@ public class Reseaux {
 
         else if (p.getClass() == NDataReq.class) {//si c'est un primitive NDataReq
             Connexion connexion = findConnexionByid(id);
-            connexion.setInfoAtransmettre(((NDataReq) p).getDonneeUser());
+            connexion.setDataToSend(((NDataReq) p).getDonneeUser());
 
 //            lancer le processus de transfert des donnees
             gestionTransfertDonnee(connexion);
@@ -79,25 +84,25 @@ public class Reseaux {
     public void gestionTransfertDonnee(Connexion connexion) {
 
 //
-        if (connexion.getNbRetransmissions() > 1) {
+        if (connexion.getNb_De_Retransmissions() > 1) {
 
             connexion.augmenterPs();
 
-            connexion.setNbRetransmissions(0);
+            connexion.setNb_De_Retransmissions(0);
         }
 
 //        obtenir le p(s) courant
-        int ps = connexion.getPs();
+        int ps = connexion.getP_s();
 
         String typePaquet, bitM, StringBinaire, strPrBinaire = "000";
 
-        String msgSegment = segmenterMessage(connexion.getInfoAtransmettre(), ps);
+        String msgSegment = segmenterMessage(connexion.getDataToSend(), ps);
 
         if (msgSegment == null) {
             return;
         }
 
-        else if (segmenterMessage(connexion.getInfoAtransmettre(), ps + 1) == null)
+        else if (segmenterMessage(connexion.getDataToSend(), ps + 1) == null)
             bitM = "0";
 
         else
@@ -141,7 +146,7 @@ public class Reseaux {
 
                 connexion.diminuerPs();
 
-                connexion.setNbRetransmissions(connexion.getNbRetransmissions() + 1);
+                connexion.setNb_De_Retransmissions(connexion.getNb_De_Retransmissions() + 1);
                 gestionTransfertDonnee(connexion);
             }
 
@@ -170,12 +175,12 @@ public class Reseaux {
             Connexion connexion = findConnexionByNumeroConnexion(nuemroConnexion);
 
 
-            if ((connexion.getPs() % 8) != Integer.valueOf(p.getTypePaquet().substring(0, 3), 2)) {
+            if ((connexion.getP_s() % 8) != Integer.valueOf(p.getTypePaquet().substring(0, 3), 2)) {
 
 
-                connexion.setPs(Integer.valueOf(p.getTypePaquet().substring(0, 3), 2));
+                connexion.setP_s(Integer.valueOf(p.getTypePaquet().substring(0, 3), 2));
 
-                connexion.setNbRetransmissions(connexion.getNbRetransmissions() + 1);
+                connexion.setNb_De_Retransmissions(connexion.getNb_De_Retransmissions() + 1);
                 gestionTransfertDonnee(connexion);
             }
             else {

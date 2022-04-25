@@ -1,35 +1,40 @@
+/*
+ *  By GANSONRE ISMAEL
+ *  * Copyright (c) 2022 GANSONRE ISMAEL. All rights reserved.
+ */
+
 package Couche.CReseaux;
 
 import Enum.state;
 
 public class Connexion {
 
-    private state state;
+    private state etat;
 
     private final int adrSourece;
     private int adrDestination;
     private final int id;
     private final int numeroConnexion;
-    private int ps;
-    private int nbRetransmissions;
-    private String infoAtransmettre;
+    private int p_s;
+    private int nb_De_Retransmissions;
+    private String DataToSend;
 
-    public Connexion(state state, int adrSourece, int adrDestination, int id, int numeroConnexion) {
-        this.state = state;
+    public Connexion(state etat, int adrSourece, int adrDestination, int id, int numeroConnexion) {
+        this.etat = etat;
         this.adrSourece = adrSourece;
         this.adrDestination = adrDestination;
         this.id = id;
         this.numeroConnexion = numeroConnexion;
-        this.ps=0;
-        this.nbRetransmissions=0;
+        this.p_s =0;
+        this.nb_De_Retransmissions =0;
     }
 
     public state getEtatConnexion() {
-        return state;
+        return etat;
     }
 
     public void setEtatConnexion(state state) {
-        this.state = state;
+        this.etat = state;
     }
 
     public int getNumeroConnexion() {
@@ -58,49 +63,49 @@ public class Connexion {
 
 
 
-    public int getPs() {
-        return ps;
+    public int getP_s() {
+        return p_s;
     }
 
-    public void setPs(int ps) {
-        this.ps = ps;
+    public void setP_s(int p_s) {
+        this.p_s = p_s;
     }
 
     public void augmenterPs() {
-        this.ps++;
+        this.p_s++;
     }
     public void diminuerPs() {
-        this.ps--;
+        this.p_s--;
     }
 
 
-    public int getNbRetransmissions() {
-        return nbRetransmissions;
+    public int getNb_De_Retransmissions() {
+        return nb_De_Retransmissions;
     }
 
-    public void setNbRetransmissions(int nbRetransmissions) {
-        this.nbRetransmissions = nbRetransmissions;
+    public void setNb_De_Retransmissions(int nb_De_Retransmissions) {
+        this.nb_De_Retransmissions = nb_De_Retransmissions;
     }
 
-    public String getInfoAtransmettre() {
-        return infoAtransmettre;
+    public String getDataToSend() {
+        return DataToSend;
     }
 
-    public void setInfoAtransmettre(String infoAtransmettre) {
-        this.infoAtransmettre = infoAtransmettre;
+    public void setDataToSend(String dataToSend) {
+        this.DataToSend = dataToSend;
     }
 
     @Override
     public String toString() {
         return "Connexion{" +
-                "state=" + state +
+                "state=" + etat +
                 ", adrSourece=" + adrSourece +
                 ", adrDestination=" + adrDestination +
                 ", id=" + id +
                 ", numeroConnexion=" + numeroConnexion +
-                ", ps=" + ps +
-                ", nbRetransmissions=" + nbRetransmissions +
-                ", infoAtransmettre='" + infoAtransmettre + '\'' +
+                ", ps=" + p_s +
+                ", nbRetransmissions=" + nb_De_Retransmissions +
+                ", infoAtransmettre='" + DataToSend + '\'' +
                 '}';
     }
 }
