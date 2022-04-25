@@ -3,7 +3,7 @@
  *  * Copyright (c) 2022 GANSONRE ISMAEL. All rights reserved.
  */
 
-package Primitive;
+package Primitives;
 
 public class NConnectReq extends Primitive{
     private int adrSource,adrDestination;
@@ -31,7 +31,7 @@ public class NConnectReq extends Primitive{
 
     @Override
     public String toString() {
-        return " Primitive :NConnect.Req { " +
+        return " Primitives :NConnect.Req { " +
                 " adrSource = " + adrSource +
                 ", adrDestination = " + adrDestination +
                 " }";

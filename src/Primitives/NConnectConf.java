@@ -3,7 +3,7 @@
  *  * Copyright (c) 2022 GANSONRE ISMAEL. All rights reserved.
  */
 
-package Primitive;
+package Primitives;
 
 public class NConnectConf extends Primitive{
 
@@ -18,7 +18,7 @@ public class NConnectConf extends Primitive{
 
     @Override
     public String toString() {
-        return " Primitive :N_Connect.Conf { " +
+        return " Primitives :N_Connect.Conf { " +
                 " adresseReponse = " + adresseReponse +
                 " }";
     }

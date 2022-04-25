@@ -7,9 +7,9 @@ package Couche.CReseaux;
 
 import Couche.CTransport.TransportCouche;
 import Couche.LiasonDonnee.LiaisonDonnee;
-import Enum.state;
+import Enum.Etat;
 import Paquet.*;
-import Primitive.*;
+import Primitives.*;
 
 import java.util.ArrayList;
 import java.util.Optional;
@@ -33,8 +33,8 @@ public class Reseaux {
     public void lire_de_transport(int id, Primitive p) {
         if (p.getClass() == NConnectReq.class)//si c'est un primitive NConnectReq
 
-//            reponde aleatoirement de primitive NConnectReq
-            decisionFournisseurAleatoire(id, (NConnectReq) p);
+//
+            decisionAleatoire(id, (NConnectReq) p);
 
         else if (p.getClass() == NDataReq.class) {//si c'est un primitive NDataReq
             Connexion connexion = findConnexionByid(id);
@@ -48,7 +48,7 @@ public class Reseaux {
 //            liberer les resource
             TCR.remove(connexion);
 
-//            envoyer le paquet Indication Liberation
+//            envoyer le Paquet Indication Liberation
             envoyerPaquet(new PaquetIndLiberation(connexion.getNumeroConnexion(), "00000001",
                     connexion.getAdrSourece(), connexion.getAdrDestination(), "ET terminer la liaison de donne"));
         }
@@ -61,7 +61,7 @@ public class Reseaux {
 
 
 
-    private void decisionFournisseurAleatoire(int id, NConnectReq nConnectReq) {
+    private void decisionAleatoire(int id, NConnectReq nConnectReq) {
         int adrSource = nConnectReq.getAdrSource();
         int adrDestination = nConnectReq.getAdrDestination();
 
@@ -70,7 +70,7 @@ public class Reseaux {
             ecrire_vers_transport(id, nDisconnectInd);
         } else {
             Connexion connexion;
-            connexion = new Connexion(state.en_attente_de_confirmation_etablissement,
+            connexion = new Connexion(Etat.en_attente_de_confirmation_etablissement,
                     adrSource, adrDestination, id, counter++);
             TCR.add(connexion);
 
@@ -136,7 +136,7 @@ public class Reseaux {
 
             Connexion connexion = findConnexionByNumeroConnexion(nuemroConnexion);
 
-            if (connexion.getEtatConnexion() == state.en_attente_de_confirmation_etablissement) {
+            if (connexion.getEtatConnexion() == Etat.en_attente_de_confirmation_etablissement) {
 
                 NDisconnectInd nDisconnectInd = new NDisconnectInd(connexion.getAdrSourece(), "la demande ne reçoit pas de réponse");
                 ecrire_vers_transport(connexion.getId(), nDisconnectInd);
@@ -164,7 +164,7 @@ public class Reseaux {
         else if (p.getClass() == PaquetCommunicationEtablie.class) {
             Connexion connexion = findConnexionByNumeroConnexion(nuemroConnexion);
 
-            connexion.setEtatConnexion(state.connexion_etablie);
+            connexion.setEtatConnexion(Etat.connexion_etablie);
 
             NConnectConf nConnectConf = new NConnectConf(connexion.getAdrSourece());
             ecrire_vers_transport(connexion.getId(), nConnectConf);

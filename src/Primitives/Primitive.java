@@ -3,7 +3,7 @@
  *  * Copyright (c) 2022 GANSONRE ISMAEL. All rights reserved.
  */
 
-package Primitive;
+package Primitives;
 
 
 public class Primitive {

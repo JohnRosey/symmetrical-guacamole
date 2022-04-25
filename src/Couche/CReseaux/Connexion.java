@@ -5,11 +5,11 @@
 
 package Couche.CReseaux;
 
-import Enum.state;
+import Enum.Etat;
 
 public class Connexion {
 
-    private state etat;
+    private Etat etat;
 
     private final int adrSourece;
     private int adrDestination;
@@ -19,7 +19,7 @@ public class Connexion {
     private int nb_De_Retransmissions;
     private String DataToSend;
 
-    public Connexion(state etat, int adrSourece, int adrDestination, int id, int numeroConnexion) {
+    public Connexion(Etat etat, int adrSourece, int adrDestination, int id, int numeroConnexion) {
         this.etat = etat;
         this.adrSourece = adrSourece;
         this.adrDestination = adrDestination;
@@ -29,12 +29,12 @@ public class Connexion {
         this.nb_De_Retransmissions =0;
     }
 
-    public state getEtatConnexion() {
+    public Etat getEtatConnexion() {
         return etat;
     }
 
-    public void setEtatConnexion(state state) {
-        this.etat = state;
+    public void setEtatConnexion(Etat Etat) {
+        this.etat = Etat;
     }
 
     public int getNumeroConnexion() {
@@ -98,7 +98,7 @@ public class Connexion {
     @Override
     public String toString() {
         return "Connexion{" +
-                "state=" + etat +
+                "Etat=" + etat +
                 ", adrSourece=" + adrSourece +
                 ", adrDestination=" + adrDestination +
                 ", id=" + id +

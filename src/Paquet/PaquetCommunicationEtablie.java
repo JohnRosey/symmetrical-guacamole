@@ -5,7 +5,7 @@
 
 package Paquet;
 
-public class PaquetCommunicationEtablie extends Paquet{
+public class PaquetCommunicationEtablie extends Paquet {
     private int adrSource,adrDestination;
 
     public PaquetCommunicationEtablie(int numeroConnexion, String typePaquet, int adrSource, int adrDestination) {

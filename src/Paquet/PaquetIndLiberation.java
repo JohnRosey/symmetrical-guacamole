@@ -6,7 +6,7 @@
 package Paquet;
 
 
-public class PaquetIndLiberation extends Paquet{
+public class PaquetIndLiberation extends Paquet {
     private int adrSource,adrDestination;
     private String raison;
 

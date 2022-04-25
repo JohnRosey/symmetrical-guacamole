@@ -5,10 +5,10 @@
 
 package Couche.CTransport;
 
-import Enum.state;
+import Enum.Etat;
 import Couche.CReseaux.Reseaux;
 import Outil.fileUtility;
-import Primitive.*;
+import Primitives.*;
 //import org.jetbrains.annotations.NotNull;
 //import org.jetbrains.annotations.Nullable;
 
@@ -71,7 +71,7 @@ public class TransportCouche {
         } else if (p.getClass() == NConnectConf.class) { //si c'est une primitive NConnectConf
             Communication commnuicationEtablie = rechercheCommunication(id);
             assert commnuicationEtablie != null;
-            commnuicationEtablie.setEtatConnexion(state.connexion_etablie);
+            commnuicationEtablie.setEtatConnexion(Etat.connexion_etablie);
 
 
             //ecrire le resultat de la reception dans la ficier S_ecr
@@ -126,7 +126,7 @@ public class TransportCouche {
 
         if ("LIB".equals(typeTrans)) {//si c'est une demande de liberation
 
-            if (communication != null && communication.getEtatConnexion() == state.connexion_etablie) {
+            if (communication != null && communication.getEtatConnexion() == Etat.connexion_etablie) {
 
                 ecrire_vers_reseau(communication.getId(), new NDisconnectReq(communication.getAdrSource()));
 
@@ -142,7 +142,7 @@ public class TransportCouche {
         }
 
         //verfier si ce app a deja communicate avec la couche transport
-        if (communication != null && communication.getEtatConnexion() == state.connexion_etablie) {
+        if (communication != null && communication.getEtatConnexion() == Etat.connexion_etablie) {
             //si c'est une demande d'envoyer le data
             if (typeTrans.equals("DATA")) {
                 //envoyer  la primitive NDataReq a la couche reseau
@@ -156,7 +156,7 @@ public class TransportCouche {
             int[] adresses = AdresseGestionnaire.genererAdresses(appSource, appDestination);
 
             //creer une nouveau object Communication
-            Communication newCon = new Communication(counter++, appSource, appDestination, state.en_attente_de_confirmation_etablissement,
+            Communication newCon = new Communication(counter++, appSource, appDestination, Etat.en_attente_de_confirmation_etablissement,
                     adresses[0], adresses[1]);
 
             //l'ajoute dans la table TCT

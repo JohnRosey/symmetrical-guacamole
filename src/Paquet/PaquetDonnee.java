@@ -6,7 +6,7 @@
 package Paquet;
 
 
-public class PaquetDonnee extends Paquet{
+public class PaquetDonnee extends Paquet {
     String donnee;
 
     public PaquetDonnee(int numeroConnexion, String typePaquet, String donnee) {

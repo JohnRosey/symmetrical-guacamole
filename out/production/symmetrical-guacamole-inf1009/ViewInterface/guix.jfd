@@ -30,7 +30,7 @@ new FormModel {
 					name: "scrollPane2"
 					add( new FormComponent( "javax.swing.JTextArea" ) {
 						name: "L_lec"
-						"font": &Font0 new java.awt.Font( "Monospaced", 3, 10 )
+						"font": &Font0 new java.awt.Font( "Ayuthaya", 0, 12 )
 					} )
 				} )
 				add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {

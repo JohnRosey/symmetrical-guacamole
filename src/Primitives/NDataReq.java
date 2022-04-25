@@ -3,7 +3,7 @@
  *  * Copyright (c) 2022 GANSONRE ISMAEL. All rights reserved.
  */
 
-package Primitive;
+package Primitives;
 
 public class NDataReq extends Primitive{
     String donneeUser;
@@ -22,7 +22,7 @@ public class NDataReq extends Primitive{
 
     @Override
     public String toString() {
-        return " Primitive :N_Data.Req { " +
+        return " Primitives :N_Data.Req { " +
                 " donneeUser = " + donneeUser +
                 " }";
     }

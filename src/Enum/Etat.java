@@ -5,7 +5,7 @@
 
 package Enum;
 
-public enum state {
+public enum Etat {
     en_attente_de_confirmation_etablissement , connexion_etablie
 
 }

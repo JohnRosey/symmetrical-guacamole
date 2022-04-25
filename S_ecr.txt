@@ -1,3 +1,0 @@
-N_CONNECT 83 11
-N_DATA test no :1 
-N_DISCONNECT

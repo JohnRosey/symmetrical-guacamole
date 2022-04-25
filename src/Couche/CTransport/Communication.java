@@ -4,22 +4,22 @@
  */
 
 package Couche.CTransport;
-import Enum.state;
+import Enum.Etat;
 
 
 public class Communication {
     final int id;
     private final String appSource;
     private final String appDestination;
-    private state state;
+    private Etat Etat;
     private String Data;
     private int adrSource,adrDestination;
 
-    public Communication(int id, String appSource, String appDestination, state state, int adSource, int adDestination) {
+    public Communication(int id, String appSource, String appDestination, Etat Etat, int adSource, int adDestination) {
         this.id = id;
         this.appSource = appSource;
         this.appDestination = appDestination;
-        this.state = state;
+        this.Etat = Etat;
         this.adrSource = adSource;
         this.adrDestination = adDestination;
     }
@@ -36,12 +36,12 @@ public class Communication {
         return appDestination;
     }
 
-    public state getEtatConnexion() {
-        return state;
+    public Etat getEtatConnexion() {
+        return Etat;
     }
 
-    public void setEtatConnexion(state state) {
-        this.state = state;
+    public void setEtatConnexion(Etat Etat) {
+        this.Etat = Etat;
     }
 
     public String getData() {

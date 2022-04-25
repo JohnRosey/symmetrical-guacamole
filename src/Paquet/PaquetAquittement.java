@@ -6,7 +6,7 @@
 package Paquet;
 
 
-public class PaquetAquittement extends Paquet{
+public class PaquetAquittement extends Paquet {
 
     public PaquetAquittement(int numeroConnexion, String typePaquet) {
         super(numeroConnexion, typePaquet);
